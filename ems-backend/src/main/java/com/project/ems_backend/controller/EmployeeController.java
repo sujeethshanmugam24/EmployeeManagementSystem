@@ -19,6 +19,10 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
+    @GetMapping("/check")
+    public ResponseEntity<String> checkHealth() {
+        return ResponseEntity.ok("Backend is working!");
+    }
 
     @PostMapping
     public ResponseEntity<EmployeeDto> createEmployee(@RequestBody EmployeeDto employeeDto){
